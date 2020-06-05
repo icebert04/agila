@@ -12,6 +12,7 @@ state={
     featuredPropertys:[],
     loading:true,
     type: "all",
+    terms: "daily",
     capacity:1,
     price:0,
     minPrice: 0,
@@ -73,7 +74,7 @@ state={
       const property = tempPropertys.find(property => property.slug === slug);
       return property;
   };
-// this handles change on the room type
+// this handles change on the checkbox
     handleChange = event => {
       const target = event.target;
       const value = target.type === 'checkbox' ? target.checked:target.value;
@@ -85,7 +86,7 @@ state={
 //filters properties
     filterPropertys = () => {
       let {
-        propertys, type, capacity, price, minSize, maxSize, breakfast, pets
+        propertys, type, terms, capacity, price, minSize, maxSize, breakfast, pets
       } = this.state
     //all the properties
     let tempPropertys = [...propertys];
@@ -97,6 +98,11 @@ state={
   //filters by type
     if(type !== 'all'){
       tempPropertys = tempPropertys.filter(property => property.type === type)
+    }
+
+    //filters by terms
+    if(terms !== 'daily'){
+      tempPropertys = tempPropertys.filter(property => property.terms === terms)
     }
 
  //filters by capacity

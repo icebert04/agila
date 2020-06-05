@@ -40,7 +40,7 @@ state={
               <span>{item.icon}</span>
               <h6>{item.title}</h6>
               <p>{item.info}</p>
-              </article> 
+              </article > 
               );         
           })}
             </div>

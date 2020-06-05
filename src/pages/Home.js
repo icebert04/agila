@@ -4,7 +4,7 @@ import Banner from "../components/Banner"
 import {Link} from 'react-router-dom'
 import Services from '../components/Services'
 import FeaturedPropertys from '../components/FeaturedPropertys'
-
+import Futer from '../components/Futer'
 
 export default function Home() {
     return (
@@ -19,6 +19,7 @@ export default function Home() {
 
          <FeaturedPropertys />
             
+        <Futer />    
     </>
     );
 };

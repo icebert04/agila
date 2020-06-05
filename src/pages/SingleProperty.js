@@ -5,6 +5,7 @@ import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import {PropertyContext} from '../context';
 import StyledHero from '../components/StyledHero';
+import Futer from '../components/Futer';
 
 export default class SingleProperty extends Component {
   constructor(props){
@@ -33,6 +34,7 @@ export default class SingleProperty extends Component {
       }
       const {name,
         description,
+        terms,
         capacity,
         size,
         price,
@@ -62,12 +64,20 @@ export default class SingleProperty extends Component {
             <p>{description}</p>
           </article>
           <article className="info">
+
             <h3>info</h3>
+
+            <h6>term : {terms}</h6>
+
             <h6>price : ${price}</h6>
-            <h6>size : ${size}SQFT</h6>
+
+            <h6>size : {size}SQFT</h6>
+      
       <h6>max capacity : {capacity > 1 ? `${capacity} people`: `${capacity} person`
       }</h6>
+      
       <h6>{pets?"pets allowed":"no pets allowed"}</h6>
+      
       <h6>{breakfast && "free breakfast included"}</h6>
           </article>
         </div>     
@@ -80,6 +90,7 @@ export default class SingleProperty extends Component {
             })}
           </ul>
         </section>
+        <Futer />
       </>
      );     
    }

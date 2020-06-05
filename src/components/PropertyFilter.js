@@ -12,6 +12,7 @@ export default function PropertyFilter({propertys}) {
     const {
         handleChange,
         type,
+        terms,
         capacity,
         price,
         minPrice,
@@ -25,6 +26,13 @@ export default function PropertyFilter({propertys}) {
     let types = getUnique(propertys, 'type');
     //add all
     types = ['all',...types];
+
+    //terms
+    let term = getUnique(propertys,'terms');
+    term = term.map((item,index)=>{
+   return <option key={index} value={item}>{item}</option>
+        })
+        
     //map to jsx
     types = types.map((item,index)=>{
         return( <option value={item} key={index}>{item}</option>
@@ -55,8 +63,22 @@ export default function PropertyFilter({propertys}) {
                  </select> 
                 
             </div>
-
             {/*end of select type*/}
+
+            {/* terms */}
+            <div className="form-group">
+                <label name="terms">term</label>
+                <select name="terms" 
+                id="terms" 
+                value={terms} 
+                className="form-control" 
+                onChange={handleChange} >
+                 {term}
+                 </select> 
+                
+            </div>
+            {/* end of terms */}
+
             {/*guests*/}
             <div className="form-group">
                 <label name="capacity">guests</label>
@@ -69,12 +91,12 @@ export default function PropertyFilter({propertys}) {
                  </select> 
                 
             </div>
-
             {/*guests end*/}
+
             {/* property price */}
                 <div className="form-group">
                     <label htmlFor="price">
-                        property price ${price}
+                         price ${price}
                     </label>
                     <input type="range" 
                     name="price" 
@@ -88,7 +110,7 @@ export default function PropertyFilter({propertys}) {
             {/* end of property price */}
             {/* size */}
             <div className="form-group">
-                <label htmlFor="size">property size</label>
+                <label htmlFor="size"> size</label>
                     <div className="size-inputs">
                         {/*min size*/}
                         <input type="number" 
