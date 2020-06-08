@@ -11,7 +11,7 @@ export default function PropertyFilter({propertys}) {
   const context = useContext(PropertyContext);
     const {
         handleChange,
-        type,
+        location,
         terms,
         capacity,
         price,
@@ -19,13 +19,14 @@ export default function PropertyFilter({propertys}) {
         maxPrice,
         minSize,
         maxSize,
-        breakfast,
-        pets
+        wifi,
+        pets,
+        parking
     } = context;
-    // get unique types
-    let types = getUnique(propertys, 'type');
+    // get unique locations
+    let locations = getUnique(propertys, 'location');
     //add all
-    types = ['all',...types];
+    locations = ['any',...locations];
 
     //terms
     let term = getUnique(propertys,'terms');
@@ -34,7 +35,7 @@ export default function PropertyFilter({propertys}) {
         })
         
     //map to jsx
-    types = types.map((item,index)=>{
+    locations = locations.map((item,index)=>{
         return( <option value={item} key={index}>{item}</option>
           );
         });
@@ -51,19 +52,19 @@ export default function PropertyFilter({propertys}) {
         <section className="filterContainer">
             <Title title="search Properties"/>
         <form className="filter-form">
-            {/*select type*/}
+            {/*select location*/}
             <div className="form-group">
-                <label name="type">property type</label>
-                <select name="type" 
-                id="type" 
-                value={type} 
+                <label name="location">property location</label>
+                <select name="location" 
+                id="location" 
+                value={location} 
                 className="form-control" 
                 onChange={handleChange} >
-                 {types}
+                 {locations}
                  </select> 
                 
             </div>
-            {/*end of select type*/}
+            {/*end of select location*/}
 
             {/* terms */}
             <div className="form-group">
@@ -96,7 +97,7 @@ export default function PropertyFilter({propertys}) {
             {/* property price */}
                 <div className="form-group">
                     <label htmlFor="price">
-                         price ${price}
+                         price ₱{price}
                     </label>
                     <input type="range" 
                     name="price" 
@@ -131,14 +132,14 @@ export default function PropertyFilter({propertys}) {
             {/* end of size */}
             {/* extras */}
             <div className="form-group">
-                {/* breakfast */}
+                {/* wifi */}
                 <div className="single-extra">
                     <input type="checkbox"
-                     name="breakfast"
-                     id="breakfast"
-                     checked={breakfast}
+                     name="wifi"
+                     id="wifi"
+                     checked={wifi}
                      onChange={handleChange}/>
-                    <label htmlFor="breakfast">breakfast</label>
+                    <label htmlFor="wifi">wifi</label>
                 </div>
 
                 {/* pets */}
@@ -150,7 +151,19 @@ export default function PropertyFilter({propertys}) {
                      onChange={handleChange}/>
                     <label htmlFor="pets">pets</label>
                 </div>
-            </div>
+          
+                {/* parking */}
+                <div className="single-extra">
+                    <input type="checkbox"
+                     name="parking"
+                     id="parking"
+                     checked={parking}
+                     onChange={handleChange}/>
+                    <label htmlFor="parking">parking</label>
+                </div> 
+             </div>
+                {/* end of parking */}
+
             {/* end of extras */}
 
         </form>

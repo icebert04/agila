@@ -11,7 +11,7 @@ state={
     sortedPropertys:[],
     featuredPropertys:[],
     loading:true,
-    type: "all",
+    location: "any",
     terms: "daily",
     capacity:1,
     price:0,
@@ -19,8 +19,9 @@ state={
     maxPrice: 0,
     minSize: 0,
     maxSize: 0,
-    breakfast: false,
-    pets: false
+    wifi: false,
+    pets: false,
+    parking: false,
 };
 //getData externally
   getData = async () => {
@@ -29,6 +30,7 @@ state={
         content_type:"agilamodel",
       //  order: "sys.createdAt"
       order: 'fields.price'
+      
       });
 
       let propertys= this.formatData(response.items);
@@ -57,7 +59,7 @@ state={
      this.getData ()
      
   }
-// this formats data from Data.js which are images, description, etc...
+// this formats data from the Data which are images, description, etc...
   formatData(items) {
       let tempItems = items.map(item =>{
         let id = item.sys.id
@@ -86,7 +88,7 @@ state={
 //filters properties
     filterPropertys = () => {
       let {
-        propertys, type, terms, capacity, price, minSize, maxSize, breakfast, pets
+        propertys, location, terms, capacity, price, minSize, maxSize, wifi, pets, parking
       } = this.state
     //all the properties
     let tempPropertys = [...propertys];
@@ -95,9 +97,9 @@ state={
     //transfrom value price
       price = parseInt(price)
 
-  //filters by type
-    if(type !== 'all'){
-      tempPropertys = tempPropertys.filter(property => property.type === type)
+  //filters by location
+    if(location !== 'any'){
+      tempPropertys = tempPropertys.filter(property => property.location === location)
     }
 
     //filters by terms
@@ -106,7 +108,7 @@ state={
     }
 
  //filters by capacity
-    if(capacity !==1  ) {
+    if(capacity !== 1  ) {
       tempPropertys = tempPropertys.filter(property => property.capacity >= capacity)
     }
 
@@ -116,14 +118,19 @@ state={
 //filter by size
     tempPropertys = tempPropertys.filter(property => property.size >= minSize && property.size <= maxSize)
 
-//filter by breakfast
-    if(breakfast){
-       tempPropertys = tempPropertys.filter(property => property.breakfast === true)
+//filter by wifi
+    if(wifi){
+       tempPropertys = tempPropertys.filter(property => property.wifi === true)
     }
 //filter by pets
     if(pets){
       tempPropertys = tempPropertys.filter(property => property.pets === true)
     }
+//filter by parking
+    if(parking){
+      tempPropertys = tempPropertys.filter(property => property.parking == true)
+    }
+
 //change state
 this.setState({
   sortedPropertys:tempPropertys

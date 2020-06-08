@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import defaultBcg from '../images/room-1.jpeg';
-import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import {PropertyContext} from '../context';
@@ -20,6 +19,9 @@ export default class SingleProperty extends Component {
  // componentDidMount() {
  //console.log(this.props);
  // }
+
+ 
+
     render() {
       const { getProperty } = this.context;
       const property = getProperty(this.state.slug);
@@ -32,20 +34,26 @@ export default class SingleProperty extends Component {
         </div>
         );
       }
+
+     
+
+
       const {name,
         description,
+        location,
         terms,
         capacity,
         size,
         price,
         extras,
-        breakfast,
+        wifi,
         pets,
+        parking,
         images} = property;
         const [mainImg,...defaultImg] = images;
      return (
        <>
-     <StyledHero img ={mainImg || this.state.defaultBcg}>
+     <StyledHero img ={images[0] || this.state.defaultBcg}>
        <Banner title={`${name} property`}>
          <Link to="/properties" className="btn-primary">
             back to properties
@@ -54,10 +62,16 @@ export default class SingleProperty extends Component {
      </StyledHero>
       <section className="single-property">
         <div className="single-property-images">
-        {defaultImg.map((item,index)=>{
-          return <img key={index} src={item} alt={name}/>;
-        })}
-        </div> 
+      
+    
+             {defaultImg.map((item,index)=> (
+           
+            
+             <img key={index} src={item} alt={name}/>
+            
+             ))}
+         </div>
+ 
         <div className="single-property-info">
           <article className="desc">
             <h3>description</h3>
@@ -67,9 +81,11 @@ export default class SingleProperty extends Component {
 
             <h3>info</h3>
 
+            <h6>location : {location}</h6>
+
             <h6>term : {terms}</h6>
 
-            <h6>price : ${price}</h6>
+            <h6>price : ₱{price}</h6>
 
             <h6>size : {size}SQFT</h6>
       
@@ -78,7 +94,9 @@ export default class SingleProperty extends Component {
       
       <h6>{pets?"pets allowed":"no pets allowed"}</h6>
       
-      <h6>{breakfast && "free breakfast included"}</h6>
+      <h6>{wifi?"wifi included":"no wifi included"}</h6>
+
+      <h6>{parking?"parking available":"no parking available"}</h6>
           </article>
         </div>     
         </section>
