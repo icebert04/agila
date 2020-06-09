@@ -87,6 +87,13 @@
     padding: 1rem;
     letter-spacing: var(--mainSpacing);
   }
+  .seperator{
+    width: 5rem;
+    height: 2px;
+    margin: 0px auto;
+    background: var(--mainWhite);
+  }
+
   /* end of globals */
   /* Navbar */
   .navbar {
@@ -156,11 +163,18 @@
     }
   }
   /* end of navbar */
+  /* logo */
+  .logo {
+    max-width: 7rem;
+    max-height: 7rem;
+  }
+
+  /*end of logo*/
   /* Hero */
   .defaultHero,
   .propertysHero {
     min-height: calc(100vh - 66px);
-    background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+    background: url("./images/defaultBcg.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,7 +187,7 @@
   /* Banner */
   .banner {
     display: inline-block;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.815);
     color: var(--mainWhite);
     padding: 2rem 1rem;
     text-align: center;
@@ -333,12 +347,16 @@
     margin: 0 auto;
     margin-bottom: 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
     grid-row-gap: 2rem;
     grid-column-gap: 50px;
 }
 
-.footer h6 {
+.grid-center {
+  white-space: nowrap;
+}
+
+.footer h5 {
   letter-spacing: var(--mainSpacing);
   text-transform: capitalize;
 }
@@ -346,6 +364,18 @@
 .footer p {
   width: 80%;
   margin: 0 auto;
+}
+
+.footer b {
+  font-size: 16px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  margin: 6px;
 }
 
 .footer a {
@@ -359,7 +389,7 @@
   font-weight: bolder;
 }
 
-.contact span {
+.footers span {
   display: inline-block;
   color: var(--primaryColor);
   font-size: 2.5rem;
@@ -368,7 +398,7 @@
 
 .copyright {
   font-weight: bold;
-  font-size: 7px;
+  font-size: 10px;
 
 }
 

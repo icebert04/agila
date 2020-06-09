@@ -9,15 +9,16 @@ import Guests from '../components/Guests'
 
 export default function Home() {
     return (
-     <>   
-    <Hero>
-        <Banner title="Philippine properties" subtitle="properties starting at ₱299">
-        <Link to="/properties" className="btn-primary">our properies</Link>
-        </Banner>
+     <>
+        <Hero>
+            <Banner title="Balay Agila" subtitle="We check Rental Properties so you don't have to">
+             <Link to="/properties" className="btn-primary">search rentals</Link>
+            </Banner>
         </Hero>
 
-        <Guests />
         
+        <Guests />
+
         <Hosts />
    
 
