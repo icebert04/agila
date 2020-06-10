@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
-import Title from './Title';
+import Newsletter from './Newsletter'
+import JoinButton from "./JoinButton";
 
+import { GrFacebook } from "react-icons/gr";
 
 export default class Futer extends Component {
 state={
-  contact:[
+  footers:[
     {
       title_contact: "contact us",
       subtitle: "customer support",
@@ -15,33 +17,45 @@ state={
       info_contact: "Email: somewhere@gmail.com",
       facebook_title: "Facebook Page",
       link: "Balay Agila"
-    },
+    }
+  ],
+  newsletter: [
     {
       title_newsletter: "let's stay connected",
       info_newsletter: "Subscribe to our Newsletter & be the first to hear about the latest news and updates",
-      
-    },
+      placeholder:  "Enter Email...",
+      subscribe: "subscribe"
+    }
+  ],
+  sites: [
     {
       title_site: "site links",
-      info_site: "help & support"
-    },
-    {
-      title_facebook: "Join our facebook group",
-      info_facebook: "This is an exclusive group for 'Friendlies' who wants to meet new interesting and talented people. Everyone is free to join! "
+      info_site: "help & support",
+      help: "help & support",
+      privacy: "privacy policy",
+      about: "About us",
+      contact: "Contact"
     }
+  ],
+  facebook: [
+    { 
+    icon: <GrFacebook/>,
+    title_facebook: "Join our facebook group",
+    info_facebook: "This is an exclusive group for 'Friendlies' who wants to meet new interesting and talented people. Everyone is free to join!",
+    button: "Join Now"
+  }
   ]
 }
 
     render() {
      return (
-        <div className="footer">
+        <section className="footer">
             <div className="footer-center">
-            {this.state.contact.map((item,index) => {
+              <div>
+            {this.state.footers.map(item => {
               return (
-                <>  
-                <section>
-            
-              <article key={index} className="footers">
+                
+              <article key={`item-${item.title}`} className="footers">
                   <h5>{item.title_contact}</h5>
                     <h6>{item.subtitle}</h6>
               <ul>
@@ -57,43 +71,74 @@ state={
                   <p>{item.info_contact}</p>
                 <br/>
               <h5>{item.facebook_title}</h5>
-                <a href="https://www.facebook.com/" target="_blank">{item.link}</a>
+                <a className="footer-link" href="https://www.facebook.com/" target="_blank">{item.link}</a>
               </article >
-            
-
+              );
+             })}
+             </div> 
+      
               
-                  <article key={index} class="footers">
+              <div>
+              {this.state.newsletter.map(item => {
+                return (
+                  <>
+                  <div key={`item-${item.title}`} class="footers">
                   <h5>
-                      {item.title_newsletter}
+                  {item.title_newsletter}
                   </h5>
                   <p>{item.info_newsletter}</p>
-                  </article>
-             
-
+                  <form name="contact" method="POST">
+                  <Newsletter />
+                  </form>
+                  </div>
+             </>
+              );
+            })}
+              </div>
               
-                  <article key={index} className="footers">
+              <div>
+             {this.state.sites.map(item => {
+              return (
+                <>
+                  <div key={`item-${item.title}`} className="footers">
                         <h5>{item.title_site}</h5>
-                        <p>{item.info_site}</p>
-                  </article>
-                  
+                        <ul className="footer-sites footer-link">
+                          <li><a>{item.help}</a></li>
+                          <div className="seperator" />
+                          <li><a>{item.privacy}</a></li>
+                          <div className="seperator" />
+                          <li><a>{item.about}</a></li>
+                          <div className="seperator" />
+                          <li><a>{item.contact}</a></li>
+                        </ul>
+                  </div>
+                  </>
+                  );
+                })}
+              </div>
 
-                  <article key={index} className= "footers">
-                        <h5>{item.title_facebook}</h5>
+                  <div>
+                  {this.state.facebook.map(item => {
+                    return (
+                      <>
+                  <div key={`item-${item.title}`} className= "footers">
+                        <span>{item.icon}</span><h5>{item.title_facebook}</h5>
+                        
                         <p>{item.info_facebook}</p>
-                    </article>
-              
-                  </section>
-
+                        <JoinButton />
+                    </div>
                 </>
               );
             })}
-           
-            </div>
-            <h7 className="copyright">
+            
+          
+                </div>
+  
+                </div>
+                <h7 className="copyright">
              Copyright © 2020
            </h7>
-        </div>
-        
-      )
+        </section>
+      );            
     }
-}
+  }  
