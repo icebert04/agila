@@ -1,30 +1,31 @@
 import React, {Component} from 'react'
-import Newsletter from './Newsletter'
+import Newsletter from './Eagle'
 import JoinButton from "./JoinButton";
+import PageLink from "./PageLink";
 
 import { GrFacebook } from "react-icons/gr";
+import Eagle from './Eagle';
 
 export default class Futer extends Component {
 state={
   footers:[
     {
       title_contact: "contact us",
-      subtitle: "customer support",
+      subtitle: "Customer Support",
       number: " 0917-5691002",
       number_cell: "Cell:",
       number_lan: "Phone:",
       lanNumber: " 02-88090130" ,
-      info_contact: "Email: somewhere@gmail.com",
-      facebook_title: "Facebook Page",
-      link: "Balay Agila"
+      info_contact: " admin@agila.com",
+      email_name: "Email:",
+      facebook_title: "Facebook Page"
     }
   ],
   newsletter: [
     {
-      title_newsletter: "let's stay connected",
-      info_newsletter: "Subscribe to our Newsletter & be the first to hear about the latest news and updates",
-      placeholder:  "Enter Email...",
-      subscribe: "subscribe"
+      title_Philippine_eagle: "let's support the Philippine Eagle Foundation",
+      info_Philippine_eagle: "The Philippine Eagle is critically endangered Philippine Eagle in its natural territory. Let's do our part as Filipinos",
+      donate: "donate"
     }
   ],
   sites: [
@@ -68,10 +69,10 @@ state={
                 </li>
               </ul>
                 <br/>
-                  <p>{item.info_contact}</p>
+                  <p><b>{item.email_name}</b> {item.info_contact}</p>
                 <br/>
               <h5>{item.facebook_title}</h5>
-                <a className="footer-link" href="https://www.facebook.com/" target="_blank">{item.link}</a>
+                <PageLink/>
               </article >
               );
              })}
@@ -84,12 +85,10 @@ state={
                   <>
                   <div key={`item-${item.title}`} class="footers">
                   <h5>
-                  {item.title_newsletter}
+                  {item.title_Philippine_eagle}
                   </h5>
-                  <p>{item.info_newsletter}</p>
-                  <form name="contact" method="POST">
-                  <Newsletter />
-                  </form>
+                  <p>{item.info_Philippine_eagle}</p>
+                  <Eagle/>
                   </div>
              </>
               );

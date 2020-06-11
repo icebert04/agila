@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import {PropertyContext} from '../context';
 import StyledHero from '../components/StyledHero';
 import Futer from '../components/Futer';
-
+ 
 export default class SingleProperty extends Component {
   constructor(props){
     super(props);
@@ -49,6 +49,7 @@ export default class SingleProperty extends Component {
         wifi,
         pets,
         parking,
+        fbLink,
         images} = property;
         const [mainImg,...defaultImg] = images;
      return (
@@ -107,7 +108,15 @@ export default class SingleProperty extends Component {
               return <li key={index}>- {item}</li>
             })}
           </ul>
+          
         </section>
+       <section>
+        <div className="fbLink btn">     
+                <p> Contact us or 
+                <a className="btn-small btn" href={fbLink} target="_blank"> Book now</a>
+              </p>
+          </div>
+          </section>
         <Futer />
       </>
      );     
