@@ -2,9 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import defaultImg from '../images/room-2.jpeg';
 import PropTypes from 'prop-types';
+import Verified from "../components/Verified";
 
 export default function Property({property}) {
- const{name,slug,images,price} = property
+ const{name,slug,images,price,verified} = property
 
 
     return (
@@ -15,6 +16,7 @@ export default function Property({property}) {
                     <h6>₱{price}</h6>
                     <p>per night</p>
                 </div>
+               {verified && <Verified/>}
                 <Link to={`/properties/${slug}`} className="btn-primary property-link" >
                     Features
                 </Link>

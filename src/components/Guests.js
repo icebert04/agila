@@ -16,7 +16,7 @@ state={
         {
             icon:<GiTwoCoins/>,
             title: "cheaper",
-            info: "Save around 40%",
+            info: "Book online for our reduced weekly/monthly rents up to 50% on all new reservations",
             subinfo : "Lower price than Hotels"
         },
         {
@@ -35,7 +35,7 @@ state={
         {
             icon:<FaBed/>,
             title: "furnished rentals",
-            info: "Enjoy your Short or Mid-term stay",
+            info: "Our listings are half the rate of a hotel for an equivalent stay period, but on par in our level of service and amenities",
             subinfo: "Feel more Independent & Secure"
         }
     ]

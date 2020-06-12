@@ -1,20 +1,19 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import Banner from '../components/Banner'
-import Futer from '../components/Futer'
 import {Link} from 'react-router-dom'
+import Futer from '../components/Futer'
 
-
-export default function Error() {
-    return (
-    <>
+export default function About() {
+    return ( 
+        <>
     <Hero >
-    <Banner title='404' subtitle='page not found'>
+    <Banner title='About us' subtitle='coming soon'>
         <Link to='/' className='btn-primary'>return home</Link>
     </Banner>
     </Hero>
         
     <Futer />
-    </>
+        </>
     )
 }

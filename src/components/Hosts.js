@@ -20,20 +20,20 @@ state={
             icon:<BsChatFill/>,
             title: "communication",
             info: "We handle 100% of guest's communication",
-            subinfo: "We take care of all tenant-related risks."
+            subinfo: "We take care of all tenant-related risks. Stellar customer support before and after booking"
         },
         {
             icon:<FaShieldAlt/>,
             title: "security",
-            info: "We screen each and every guests with proper ID verification",
+            info: "Verify guests via academic & professional reference",
             subinfo : "We find the Best Tenants that goes well with your property, Deposit policy & Insurance a possibility"
             
         },
         {
             icon:<BsFillHouseFill/>,
             title: "property management",
-            info: "We help hosts provide 5-star quality housekeeping & maintenance management",
-            subinfo: "We furnish up your property, assist professional cleaning (COVID-Free), & schedule regular check-ups to make sure it stays in top-notch condition"
+            info: "Our customer support team will assist you with extending bookings, cancellations & mediation",
+            subinfo: "We help hosts provide 5-star quality housekeeping & maintenance management, assist professional cleaning (COVID-Protect), & schedule regular check-ups to make sure it stays in top-notch condition"
         }
     ]
 };

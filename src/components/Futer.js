@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
-import Newsletter from './Eagle'
+
 import JoinButton from "./JoinButton";
 import PageLink from "./PageLink";
+import Eagle from './Eagle';
 
 import { GrFacebook } from "react-icons/gr";
-import Eagle from './Eagle';
+
+import Agila from './Agila';
 
 export default class Futer extends Component {
 state={
@@ -16,33 +18,34 @@ state={
       number_cell: "Cell:",
       number_lan: "Phone:",
       lanNumber: " 02-88090130" ,
-      info_contact: " admin@agila.com",
+      info_contact: " admin@balayagila.com",
       email_name: "Email:",
-      facebook_title: "Facebook Page"
+      facebook_title: "Visit our FB Page"
     }
   ],
-  newsletter: [
+  pef: [
     {
-      title_Philippine_eagle: "let's support the Philippine Eagle Foundation",
-      info_Philippine_eagle: "The Philippine Eagle is critically endangered Philippine Eagle in its natural territory. Let's do our part as Filipinos",
+      title_Philippine_eagle: "Our Philippine Eagle is diminishing",
+      info_Philippine_eagle: "Help The Philippine Eagle Foundation in your own way",
       donate: "donate"
     }
   ],
   sites: [
     {
       title_site: "site links",
-      info_site: "help & support",
-      help: "help & support",
-      privacy: "privacy policy",
+      
+      faq: "FAQ",
+      insurance: "Insurance",
       about: "About us",
-      contact: "Contact"
+      accommodation: "Temporary Accommodation",
+      covid: "COVID-19 protected"
     }
   ],
   facebook: [
     { 
     icon: <GrFacebook/>,
-    title_facebook: "Join our facebook group",
-    info_facebook: "This is an exclusive group for 'Friendlies' who wants to meet new interesting and talented people. Everyone is free to join!",
+    title_facebook: "Join our exclusive facebook group",
+    info_facebook: "Become part of our substantial & vibrant 'Hosting Community', Get inside access",
     button: "Join Now"
   }
   ]
@@ -80,7 +83,7 @@ state={
       
               
               <div>
-              {this.state.newsletter.map(item => {
+              {this.state.pef.map(item => {
                 return (
                   <>
                   <div key={`item-${item.title}`} class="footers">
@@ -89,6 +92,9 @@ state={
                   </h5>
                   <p>{item.info_Philippine_eagle}</p>
                   <Eagle/>
+                  </div>
+                  <div>
+                    <Agila/>
                   </div>
              </>
               );
@@ -102,13 +108,15 @@ state={
                   <div key={`item-${item.title}`} className="footers">
                         <h5>{item.title_site}</h5>
                         <ul className="footer-sites footer-link">
-                          <li><a>{item.help}</a></li>
+                          <li><a>{item.covid}</a></li>
                           <div className="seperator" />
-                          <li><a>{item.privacy}</a></li>
+                          <li><a href="/about/">{item.about}</a></li>
                           <div className="seperator" />
-                          <li><a>{item.about}</a></li>
+                          <li><a>{item.faq}</a></li>
                           <div className="seperator" />
-                          <li><a>{item.contact}</a></li>
+                          <li><a>{item.insurance}</a></li>
+                          <div className="seperator" />
+                          <li><a>{item.accommodation}</a></li>
                         </ul>
                   </div>
                   </>
@@ -135,7 +143,7 @@ state={
   
                 </div>
                 <h7 className="copyright">
-             Copyright © 2020
+             ©2020 Balay Agila - All Rights Reserved
            </h7>
         </section>
       );            
