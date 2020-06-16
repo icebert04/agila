@@ -5,6 +5,8 @@ import PageLink from "./PageLink";
 import Eagle from './Eagle';
 
 import { GrFacebook } from "react-icons/gr";
+import { FaPhoneAlt } from "react-icons/fa";
+import { GrMail } from "react-icons/gr";
 
 import Agila from './Agila';
 
@@ -13,13 +15,14 @@ state={
   footers:[
     {
       title_contact: "contact us",
-      subtitle: "Customer Support",
+      subtitle: "Our team is at your disposal",
+      cell_icon: <FaPhoneAlt/>,
       number: " 0917-5691002",
       number_cell: "Cell:",
       number_lan: "Phone:",
       lanNumber: " 02-88090130" ,
       info_contact: " admin@balayagila.com",
-      email_name: "Email:",
+      email_name: <GrMail/>,
       facebook_title: "Visit our FB Page"
     }
   ],
@@ -37,8 +40,8 @@ state={
       faq: "FAQ",
       insurance: "Insurance",
       about: "About us",
-      accommodation: "Temporary Accommodation",
-      covid: "COVID-19 protected"
+      apply: "apply as landlords",
+      covid: "COVID-19 protect"
     }
   ],
   facebook: [
@@ -64,11 +67,11 @@ state={
                     <h6>{item.subtitle}</h6>
               <ul>
                 <li>  
-                  <p><b>{item.number_cell}</b>{item.number}</p>
+                  <p><b>{item.cell_icon}</b>{item.number}</p>
                 </li>
 
                 <li>
-                  <p><b>{item.number_lan}</b> {item.lanNumber}</p>
+                  <p><b>{item.cell_icon}</b> {item.lanNumber}</p>
                 </li>
               </ul>
                 <br/>
@@ -108,15 +111,23 @@ state={
                   <div key={`item-${item.title}`} className="footers">
                         <h5>{item.title_site}</h5>
                         <ul className="footer-sites footer-link">
-                          <li><a>{item.covid}</a></li>
+                          <li><a href="/covid/">{item.covid}</a></li>
+
                           <div className="seperator" />
+
                           <li><a href="/about/">{item.about}</a></li>
+
                           <div className="seperator" />
+
                           <li><a>{item.faq}</a></li>
+
                           <div className="seperator" />
+
                           <li><a>{item.insurance}</a></li>
+
                           <div className="seperator" />
-                          <li><a>{item.accommodation}</a></li>
+
+                          <li><a>{item.apply}</a></li>
                         </ul>
                   </div>
                   </>
@@ -142,9 +153,9 @@ state={
                 </div>
   
                 </div>
-                <h7 className="copyright">
+                <h6 className="copyright">
              ©2020 Balay Agila - All Rights Reserved
-           </h7>
+           </h6>
         </section>
       );            
     }

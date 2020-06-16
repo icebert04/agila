@@ -7,9 +7,9 @@ import { GiReceiveMoney} from 'react-icons/gi';
 import { BsChatFill, BsFillHouseFill } from 'react-icons/bs';
 // import {  } from 'react-icons/ai';
 
-export default class Hosts extends Component {
+export default class Landlord extends Component {
 state={
-    host:[
+    landlord:[
         {
             icon:<GiReceiveMoney/>,
             title: "earnings",
@@ -25,7 +25,7 @@ state={
         {
             icon:<FaShieldAlt/>,
             title: "security",
-            info: "Verify guests via academic & professional reference",
+            info: "Verify tenants via academic & professional reference",
             subinfo : "We find the Best Tenants that goes well with your property, Deposit policy & Insurance a possibility"
             
         },
@@ -33,7 +33,7 @@ state={
             icon:<BsFillHouseFill/>,
             title: "property management",
             info: "Our customer support team will assist you with extending bookings, cancellations & mediation",
-            subinfo: "We help hosts provide 5-star quality housekeeping & maintenance management, assist professional cleaning (COVID-Protect), & schedule regular check-ups to make sure it stays in top-notch condition"
+            subinfo: "We help landlords provide 5-star quality housekeeping & maintenance management, assist professional cleaning (COVID-Protect), & schedule regular check-ups to make sure it stays in top-notch condition"
         }
     ]
 };
@@ -41,12 +41,12 @@ state={
     render() {
      return (
 
-        <div className="hosts">
-            <Title title='for hosts' />
-            <div className="hosts-center">
-                {this.state.host.map((item, index) => {
+        <div className="landlords">
+            <Title title='for landlords' />
+            <div className="landlords-center">
+                {this.state.landlord.map((item, index) => {
               return (
-              <article key={index} className="host">
+              <article key={index} className="landlord">
               <span>{item.icon}</span>
               <h6>{item.title}</h6>
               <p>{item.info}</p>

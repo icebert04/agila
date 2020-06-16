@@ -2,10 +2,11 @@ import React from 'react'
 import Hero from "../components/Hero"
 import Banner from "../components/Banner"
 import {Link} from 'react-router-dom'
-import Hosts from '../components/Hosts'
+import Landlord from '../components/Landlord'
 import FeaturedPropertys from '../components/FeaturedPropertys'
 import Futer from '../components/Futer'
-import Guests from '../components/Guests'
+import Tenants from '../components/Tenants'
+import Info from '../components/Info'
 
 export default function Home() {
     return (
@@ -16,10 +17,11 @@ export default function Home() {
             </Banner>
         </Hero>
 
-        
-        <Guests />
+         <Info />
 
-        <Hosts />
+        <Tenants />
+
+        <Landlord />
    
 
          <FeaturedPropertys />

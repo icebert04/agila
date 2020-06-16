@@ -2,22 +2,19 @@ import React, {Component} from 'react'
 import Title from './Title'
 
 //icons
-import { FaBed, FaCoffee } from 'react-icons/fa';
+import { FaBed, FaCoffee, FaVideo } from 'react-icons/fa';
 // import {  } from 'react-icons/ti';
-import { GrMoney } from 'react-icons/gr';
-import { GiTwoCoins, GiEntryDoor} from 'react-icons/gi';
-import { BsChatFill, BsFillXSquareFill } from 'react-icons/bs';
+// import {  } from 'react-icons/gr';
+import { GiTwoCoins } from 'react-icons/gi';
+// import {  } from 'react-icons/bs';
 // import {  } from 'react-icons/ai';
-import { MdKitchen } from 'react-icons/md';
 
-export default class Guests extends Component {
+export default class Tenants extends Component {
 state={
-    host:[
+    landlord:[
         {
-            icon:<GiTwoCoins/>,
-            title: "cheaper",
-            info: "Book online for our reduced weekly/monthly rents up to 50% on all new reservations",
-            subinfo : "Lower price than Hotels"
+            icon:<FaVideo/>,
+            title: "video"
         },
         {
             icon:<FaCoffee/>,
@@ -25,12 +22,11 @@ state={
             info: "Wifi, Kitchen, Coffee maker, Netflix, Parking, etc... all at your disposal",
             subinfo: "Tell us what else do you need... We'll add that too"
         },
-        {
-            icon:<BsFillXSquareFill/>,
-            title: "flexible cancellation policies",
-            info: "Have the option to be able to cancel 2 days before your arrival date",
-            subinfo : "Extended stay a possibility when necessary"
-            
+         {
+            icon:<GiTwoCoins/>,
+            title: "cheaper",
+            info: "Book online for our reduced weekly/monthly rents up to 50% on all new reservations",
+            subinfo : "Lower price than Hotels"
         },
         {
             icon:<FaBed/>,
@@ -44,10 +40,10 @@ state={
     render() {
      return (
 
-        <div className="guests">
-            <Title title='for guests' />
-            <div className="guests-center">
-                {this.state.host.map((item, index) => {
+        <div className="tenants">
+            <Title title='for tenants' />
+            <div className="tenants-center">
+                {this.state.landlord.map((item, index) => {
               return (
               <article key={index} className="guest">
               <span>{item.icon}</span>

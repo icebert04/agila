@@ -80,9 +80,9 @@ export default function PropertyFilter({propertys}) {
             </div>
             {/* end of terms */}
 
-            {/*guests*/}
+            {/*tenants*/}
             <div className="form-group">
-                <label name="capacity">guests</label>
+                <label name="capacity">tenants</label>
                 <select name="capacity" 
                 id="capacity" 
                 value={capacity} 
@@ -92,7 +92,7 @@ export default function PropertyFilter({propertys}) {
                  </select> 
                 
             </div>
-            {/*guests end*/}
+            {/*tenants end*/}
 
             {/* property price */}
                 <div className="form-group">

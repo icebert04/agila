@@ -5,7 +5,7 @@ import Client from './Contentful';
 const PropertyContext = React.createContext();
 // <PropertyContext.Provider value ={}
 //this is just state the filter that is rendered on open
-class PropertyProvider extends Component {
+export default class PropertyProvider extends Component {
 state={
     propertys:[],
     sortedPropertys:[],

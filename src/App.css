@@ -15,6 +15,7 @@
     --mainSpacing: 3px;
     --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
     --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    --textShadow: 2px 2px 1px;
   }
   /* globals */
   body {
@@ -282,15 +283,99 @@
   }
   /* end of Title */
   
-  /* for hosts */
-  .hosts {
+  /*  info  */
+  .description {
+    padding: 3rem;
+    margin: 3rem;
+    text-align: center;
+    
+  }
+
+  .description b {
+    color: var(--primaryColor);
+  }
+
+  .description p {
+    text-shadow: var(--textShadow) var(--darkGrey); 
+    font-size: 1.9rem;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 820px) {
+    .description {
+      margin: 4rem;
+    } 
+
+    .description p {
+      font-size: 16px;
+    }
+  }
+  /* end of info */
+
+  /* about us */ 
+  .about {
+    margin: 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .about {
+    text-align: center;
+  }
+
+  .about p {
+    text-shadow: var(--textShadow) var(--darkGrey);
+    margin: 3rem;
+    font-size: 1.5rem;
+  }
+
+
+
+  .gold-text {
+    color: var(--primaryColor);
+    text-decoration: none;
+  }
+
+  /* end of about */
+
+  /* Covid */
+
+  .covid {
+    padding: 2rem;
+  }
+
+  .covid {
+    text-align: center;
+
+  }
+
+  .covid ul{
+    list-style: none;
+    width: 90vw;
+    margin: 3rem auto;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+}
+
+
+
+  .covid h6 {
+    font-weight: 0px;
+  }
+
+  /* end of Covid */
+
+  /* for landlords */
+  .landlords {
     padding: 5rem 0;
   }
-  .hosts {
+  .landlords {
     background: var(--darkGrey);
     text-align: center;
   }
-  .hosts-center {
+  .landlords-center {
     width: 90vw;
     margin: 0 auto;
     display: grid;
@@ -298,44 +383,44 @@
     grid-row-gap: 2rem;
     grid-column-gap: 50px;
   }
-  .host span {
+  .landlord span {
     display: inline-block;
     color: var(--primaryColor);
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
   }
-  .hosts h6 {
+  .landlords h6 {
     letter-spacing: var(--mainSpacing);
     text-transform: capitalize;
   }
-  .hosts p {
+  .landlords p {
     width: 80%;
     margin: 0 auto;
   }
   @media screen and (min-width: 992px) {
-    .hosts-center {
+    .landlords-center {
       width: 95vw;
       max-width: 1170px;
     }
   }
   
   @media screen and (min-width: 1200px) {
-    .hosts p {
+    .landlords p {
       width: 100%;
     }
   }
-  /*end of hosts */
+  /*end of landlords */
   
- /* guests */ 
- .guests {
+ /* tenants */ 
+ .tenants {
   padding: 5rem 0;
 }
-.guests {
+.tenants {
   color: var(--mainWhite);
   background: var(--mainBlack);
   text-align: center;
 }
-.guests-center {
+.tenants-center {
   width: 90vw;
   margin: 0 auto;
   display: grid;
@@ -349,27 +434,27 @@
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
-.guests h6 {
+.tenants h6 {
   letter-spacing: var(--mainSpacing);
   text-transform: capitalize;
 }
-.guests p {
+.tenants p {
   width: 80%;
   margin: 0 auto;
 }
 @media screen and (min-width: 992px) {
-  .guests-center {
+  .tenants-center {
     width: 95vw;
     max-width: 1170px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .guests p {
+  .tenants p {
     width: 100%;
   }
 }
- /* end of guests */
+ /* end of tenants */
 
   /* footer */
 .footer {
