@@ -134,6 +134,13 @@
     background: var(--mainWhite);
   }
 
+    .icon {
+      font-size: 50px;
+      color: var(--primaryColor);
+      padding: none;
+      margin: none;
+    }
+
   /* end of globals */
   /* Navbar */
   .navbar {
@@ -322,9 +329,10 @@
     text-align: center;
   }
 
+
   .about p {
     text-shadow: var(--textShadow) var(--darkGrey);
-    margin: 3rem;
+    margin: 3.5rem;
     font-size: 1.5rem;
   }
 
@@ -366,6 +374,43 @@
   }
 
   /* end of Covid */
+
+  /* apply */
+
+  .apply {
+  
+    padding: 5rem;
+  }
+
+  .apply-grid {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-row-gap: 1rem;
+    grid-column-gap: 2px;
+  }
+
+.first {
+  background: var(--offWhite);
+}
+
+.second {
+  background: var(--darkGrey);
+}
+
+  .apply li {
+    list-style: none;
+    text-align: left;
+  }
+
+  .apply h3 {
+    font-weight: bold;
+    color: var(--primaryColor);
+    padding: 5rem;
+  }
+
+  /* end of apply */
 
   /* for landlords */
   .landlords {
@@ -694,6 +739,75 @@
     grid-row-gap: 2rem;
     grid-column-gap: 50px;
   }
+  .single-property-images img {
+    width: 100%;
+    height: 40vh;
+    display: block;
+  }
+  .single-property-info {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+  }
+  .desc,
+  .info {
+    margin: 1rem 0;
+  }
+  .desc h3 {
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+  }
+  .desc p {
+    line-height: 1.5;
+  }
+  .info h3,
+  .info h6 {
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+  }
+  
+  .info h6 {
+    font-weight: 300;
+  }
+  .property-extras {
+    width: 80vw;
+    margin: 0 auto 3rem auto;
+  }
+  .property-extras h6 {
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+  }
+  .extras {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+  }
+
+  .fbLink {
+    margin: 20px 0px 0px 15px;
+    text-decoration: none;
+  }
+  @media screen and (min-width: 992px) {
+    .single-property-images,
+    .single-property-info,
+    .property-extras {
+      width: 95vw;
+      max-width: 1170px;
+    }
+    .single-property-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2rem;
+    }
+    .info {
+      padding-left: 3rem;
+    }
+  }
+  /* end of single property*/
+
 /* modal */
 
 
@@ -827,74 +941,6 @@
 
 /* end of modal */
 
-
-  .single-property-images img {
-    width: 100%;
-    display: block;
-  }
-  .single-property-info {
-    width: 80vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 2rem auto;
-  }
-  .desc,
-  .info {
-    margin: 1rem 0;
-  }
-  .desc h3 {
-    text-transform: capitalize;
-    letter-spacing: var(--mainSpacing);
-  }
-  .desc p {
-    line-height: 1.5;
-  }
-  .info h3,
-  .info h6 {
-    text-transform: capitalize;
-    letter-spacing: var(--mainSpacing);
-  }
-  
-  .info h6 {
-    font-weight: 300;
-  }
-  .property-extras {
-    width: 80vw;
-    margin: 0 auto 3rem auto;
-  }
-  .property-extras h6 {
-    text-transform: capitalize;
-    letter-spacing: var(--mainSpacing);
-  }
-  .extras {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    grid-column-gap: 2rem;
-    grid-row-gap: 1rem;
-  }
-
-  .fbLink {
-    margin: 20px 0px 0px 15px;
-    text-decoration: none;
-  }
-  @media screen and (min-width: 992px) {
-    .single-property-images,
-    .single-property-info,
-    .property-extras {
-      width: 95vw;
-      max-width: 1170px;
-    }
-    .single-property-info {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 2rem;
-    }
-    .info {
-      padding-left: 3rem;
-    }
-  }
-  /* end of single property*/
   /* propertylist */
   .propertyslist {
     padding: 5rem 0;

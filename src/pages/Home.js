@@ -12,7 +12,7 @@ export default function Home() {
     return (
      <>
         <Hero>
-            <Banner title="Balay Agila" subtitle="We check Rental Properties so you don't have to">
+            <Banner title="Balay Agila" subtitle="We visit the Properties, so you can book from wherever you are">
              <Link to="/properties" className="btn-primary">search rentals</Link>
             </Banner>
         </Hero>

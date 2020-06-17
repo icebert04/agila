@@ -2,37 +2,40 @@ import React, {Component} from 'react'
 import Title from './Title'
 
 //icons
-import { FaBed, FaCoffee, FaVideo } from 'react-icons/fa';
+import { FaCoffee, FaVideo } from 'react-icons/fa';
 // import {  } from 'react-icons/ti';
 // import {  } from 'react-icons/gr';
-import { GiTwoCoins } from 'react-icons/gi';
+import { GiTwoCoins, GiLifeSupport } from 'react-icons/gi';
 // import {  } from 'react-icons/bs';
 // import {  } from 'react-icons/ai';
+
 
 export default class Tenants extends Component {
 state={
     landlord:[
         {
             icon:<FaVideo/>,
-            title: "video"
+            title: "view online",
+            info: "Our team will visit properties, take photos, floor plans and video tours for you, at no cost",
+            subinfo: "We will show you around, a guided tour from the comforts of your home"
         },
         {
             icon:<FaCoffee/>,
             title: "complete amenities",
-            info: "Wifi, Kitchen, Coffee maker, Netflix, Parking, etc... all at your disposal",
+            info: "High-speed WiFi, fully-equipped kitchen, a coffee machine, on-site laundry, gym, working desks/office space & more",
             subinfo: "Tell us what else do you need... We'll add that too"
         },
          {
             icon:<GiTwoCoins/>,
             title: "cheaper",
-            info: "Book online for our reduced weekly/monthly rents up to 50% on all new reservations",
-            subinfo : "Lower price than Hotels"
+            info: "Will help you find the right location and a furnished home to fit your need within your budget",
+            subinfo : "Provide more spacious, lower-cost alternative to a hotel"
         },
         {
-            icon:<FaBed/>,
-            title: "furnished rentals",
-            info: "Our listings are half the rate of a hotel for an equivalent stay period, but on par in our level of service and amenities",
-            subinfo: "Feel more Independent & Secure"
+            icon:<GiLifeSupport/>,
+            title: "Ongoing Support",
+            info: "Avoid face-to-face contact with around the clock support via phone & email",
+            subinfo: "Our live chat is here to manage all critical service needs"
         }
     ]
 };

@@ -19,7 +19,7 @@ state={
     maxPrice: 0,
     minSize: 0,
     maxSize: 0,
-    wifi: false,
+    Wifi: false,
     pets: false,
     parking: false,
 };
@@ -88,7 +88,7 @@ state={
 //filters properties
     filterPropertys = () => {
       let {
-        propertys, location, terms, capacity, price, minSize, maxSize, wifi, pets, parking
+        propertys, location, terms, capacity, price, minSize, maxSize, Wifi, pets, parking
       } = this.state
     //all the properties
     let tempPropertys = [...propertys];
@@ -118,9 +118,9 @@ state={
 //filter by size
     tempPropertys = tempPropertys.filter(property => property.size >= minSize && property.size <= maxSize)
 
-//filter by wifi
-    if(wifi){
-       tempPropertys = tempPropertys.filter(property => property.wifi === true)
+//filter by Wifi
+    if(Wifi){
+       tempPropertys = tempPropertys.filter(property => property.Wifi === true)
     }
 //filter by pets
     if(pets){

@@ -14,25 +14,25 @@ state={
             icon:<GiReceiveMoney/>,
             title: "earnings",
             info: "Attain higher occupancy rate through Mid-Term rentals",
-            subinfo : "We will fully optimise your property listing, pricing and occupancy"
+            subinfo : "Steady cash-flow guaranteed, maximizing the property's annual yield"
         },
         {
             icon:<BsChatFill/>,
             title: "communication",
-            info: "We handle 100% of guest's communication",
-            subinfo: "We take care of all tenant-related risks. Stellar customer support before and after booking"
+            info: "We handle 100% of tenant's communication",
+            subinfo: "Contactless Booking and Check-In... Easy online so you can review, offer the contract, check-in and collect payments digitally"
         },
         {
             icon:<FaShieldAlt/>,
             title: "security",
-            info: "Verify tenants via academic & professional reference",
-            subinfo : "We find the Best Tenants that goes well with your property, Deposit policy & Insurance a possibility"
+            info: "Vetted tenants, typically business executives who stay for one month or longer",
+            subinfo : "Your property will always be in impeccable condition... Security Deposit Policy & Insurance a possibility"
             
         },
         {
             icon:<BsFillHouseFill/>,
             title: "property management",
-            info: "Our customer support team will assist you with extending bookings, cancellations & mediation",
+            info: "Our customer support team will manage all the work on your behalf to enable a seamless guest experience",
             subinfo: "We help landlords provide 5-star quality housekeeping & maintenance management, assist professional cleaning (COVID-Protect), & schedule regular check-ups to make sure it stays in top-notch condition"
         }
     ]

@@ -19,7 +19,7 @@ export default function PropertyFilter({propertys}) {
         maxPrice,
         minSize,
         maxSize,
-        wifi,
+        Wifi,
         pets,
         parking
     } = context;
@@ -132,14 +132,14 @@ export default function PropertyFilter({propertys}) {
             {/* end of size */}
             {/* extras */}
             <div className="form-group">
-                {/* wifi */}
+                {/* Wifi */}
                 <div className="single-extra">
                     <input type="checkbox"
-                     name="wifi"
-                     id="wifi"
-                     checked={wifi}
+                     name="Wifi"
+                     id="Wifi"
+                     checked={Wifi}
                      onChange={handleChange}/>
-                    <label htmlFor="wifi">wifi</label>
+                    <label htmlFor="Wifi">Wifi</label>
                 </div>
 
                 {/* pets */}

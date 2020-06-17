@@ -46,7 +46,7 @@ export default class SingleProperty extends Component {
         size,
         price,
         extras,
-        wifi,
+        Wifi,
         pets,
         parking,
         fbLink,
@@ -95,7 +95,7 @@ export default class SingleProperty extends Component {
       
       <h6>{pets?"pets allowed":"no pets allowed"}</h6>
       
-      <h6>{wifi?"wifi included":"no wifi included"}</h6>
+      <h6>{Wifi?"Wifi included":"no Wifi included"}</h6>
 
       <h6>{parking?"parking available":"no parking available"}</h6>
           </article>

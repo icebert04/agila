@@ -111,11 +111,11 @@ state={
                   <div key={`item-${item.title}`} className="footers">
                         <h5>{item.title_site}</h5>
                         <ul className="footer-sites footer-link">
-                          <li><a href="/covid/">{item.covid}</a></li>
+                          <li><a href="/covid/" target="_blank">{item.covid}</a></li>
 
                           <div className="seperator" />
 
-                          <li><a href="/about/">{item.about}</a></li>
+                          <li><a href="/about/" target="_blank">{item.about}</a></li>
 
                           <div className="seperator" />
 
@@ -127,7 +127,7 @@ state={
 
                           <div className="seperator" />
 
-                          <li><a>{item.apply}</a></li>
+                          <li><a href="/apply/" target="_blank">{item.apply}</a></li>
                         </ul>
                   </div>
                   </>
