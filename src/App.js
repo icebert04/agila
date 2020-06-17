@@ -20,9 +20,7 @@ function App() {
    <Switch>
      <Route exact path="/"  component={Home} />
      <Route exact path="/properties/" component={Propertys} />
-     <Route exact path="/about/" component={About} />
-     <Route excat path="/covid/" component={Covid} />
-     <Route exact path="/apply/" component={Apply} />
+
      <Route exact path="/properties/:slug" component={SingleProperty} />
      <Route component={Error} />
    </Switch>

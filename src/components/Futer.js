@@ -23,25 +23,19 @@ state={
       lanNumber: " 02-88090130" ,
       info_contact: " admin@balayagila.com",
       email_name: <TiMail/>,
-      facebook_title: "Visit our FB Page"
-    }
-  ],
-  pef: [
-    {
+      facebook_title: "Visit our FB Page",
+  
       title_Philippine_eagle: "Our Philippine Eagle is diminishing",
       info_Philippine_eagle: "Help The Philippine Eagle Foundation in your own way",
-      donate: "donate"
-    }
-  ],
-  sites: [
-    {
+      donate: "donate",
+   
       title_site: "site links",
       
       faq: "FAQ",
       insurance: "Insurance",
       about: "About us",
       accommodation: "Temporary Accommodation",
-      covid: "COVID-19 protected"
+      covid: "COVID-19 protected",
     }
   ],
   facebook: [
@@ -56,13 +50,14 @@ state={
 
     render() {
      return (
-        <section className="footer">
+      
+            <section className="footer">
             <div className="footer-center">
-              <div>
-            {this.state.footers.map(item => {
-              return (
-                
-              <article key={`item-${item.title}`} className="footers">
+              
+            {this.state.footers.map((item,a,e,o,u) => { 
+            return (
+            <>
+              <article key={a} className="footers">
                   <h5>{item.title_contact}</h5>
                     <h6>{item.subtitle}</h6>
               <ul>
@@ -80,16 +75,63 @@ state={
               <h5>{item.facebook_title}</h5>
                 <PageLink/>
               </article >
+              
+              <article key={e} className="footers">
+                <div>
+                  <h5>
+                  {item.title_Philippine_eagle}
+                  </h5>
+                  <p>{item.info_Philippine_eagle}</p>
+                  <Eagle/>
+                  </div>
+                  <div>
+                    <Agila/>
+                    </div>
+                  </article>
+                
+
+                  <div key={o} className="footers">
+                        <h5>{item.title_site}</h5>
+                        <ul className="footer-sites footer-link">
+                          <li><a>{item.covid}</a></li>
+                          <div className="seperator" />
+                          <li><a>{item.about}</a></li>
+                          <div className="seperator" />
+                          <li><a>{item.faq}</a></li>
+                          <div className="seperator" />
+                          <li><a>{item.insurance}</a></li>
+                          <div className="seperator" />
+                          <li><a>{item.accommodation}</a></li>
+                        </ul>
+                      </div>
+
+                      <div key={u} className= "footers">
+                        <span>{item.icon}</span><h5>{item.title_facebook}</h5>
+                        
+                        <p>{item.info_facebook}</p>
+                        <JoinButton />
+                    </div>
+
+                    </>
+                    );
+                   })}
+                   </div> 
+                    
+                   <h6 className="copyright">
+             ©2020 Balay Agila - All Rights Reserved
+           </h6>
+        </section>
+              
               );
-             })}
-             </div> 
+            
+             
       
               
-              <div>
-              {this.state.pef.map(item => {
+              {/* <div>
+              {this.state.pef.map((item,o) => {
                 return (
                   <>
-                  <div key={`item-${item.title}`} className="footers">
+                  <div key={o} className="footers">
                   <h5>
                   {item.title_Philippine_eagle}
                   </h5>
@@ -102,13 +144,13 @@ state={
              </>
               );
             })}
-              </div>
+              </div> */}
               
-              <div>
-             {this.state.sites.map(item => {
+            {/*    <div>
+              {this.state.sites.map((item,e) => { 
               return (
                 <>
-                  <div key={`item-${item.title}`} className="footers">
+                  <div key={e} className="footers">
                         <h5>{item.title_site}</h5>
                         <ul className="footer-sites footer-link">
                           <li><a>{item.covid}</a></li>
@@ -126,12 +168,12 @@ state={
                   );
                 })}
               </div>
-
-                  <div>
-                  {this.state.facebook.map(item => {
+*/}
+                  {/* <div>
+                  {this.state.facebook.map((item,u) => {
                     return (
                       <>
-                  <div key={`item-${item.title}`} className= "footers">
+                  <div key={u} className= "footers">
                         <span>{item.icon}</span><h5>{item.title_facebook}</h5>
                         
                         <p>{item.info_facebook}</p>
@@ -140,15 +182,12 @@ state={
                 </>
               );
             })}
+                </div> */}
             
           
-                </div>
   
-                </div>
-                <h6 className="copyright">
-             ©2020 Balay Agila - All Rights Reserved
-           </h6>
-        </section>
-      );            
+               
+                
+                
     }
   }  

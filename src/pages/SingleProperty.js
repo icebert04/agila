@@ -51,7 +51,7 @@ export default class SingleProperty extends Component {
         parking,
         fbLink,
         images} = property;
-        const [mainImg,...defaultImg] = images;
+        const [...defaultImg] = images;
      return (
        <>
      <StyledHero img ={images[0] || this.state.defaultBcg}>

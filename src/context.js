@@ -128,7 +128,7 @@ state={
     }
 //filter by parking
     if(parking){
-      tempPropertys = tempPropertys.filter(property => property.parking == true)
+      tempPropertys = tempPropertys.filter(property => property.parking === true)
     }
 
 //change state
