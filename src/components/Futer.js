@@ -6,7 +6,7 @@ import Eagle from './Eagle';
 
 import { GrFacebook } from "react-icons/gr";
 import { FaPhoneAlt } from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
+import { TiMail } from "react-icons/ti";
 
 import Agila from './Agila';
 
@@ -22,7 +22,7 @@ state={
       number_lan: "Phone:",
       lanNumber: " 02-88090130" ,
       info_contact: " admin@balayagila.com",
-      email_name: <GrMail/>,
+      email_name: <TiMail/>,
       facebook_title: "Visit our FB Page"
     }
   ],
@@ -40,8 +40,8 @@ state={
       faq: "FAQ",
       insurance: "Insurance",
       about: "About us",
-      apply: "apply as landlords",
-      covid: "COVID-19 protect"
+      accommodation: "Temporary Accommodation",
+      covid: "COVID-19 protected"
     }
   ],
   facebook: [
@@ -89,7 +89,7 @@ state={
               {this.state.pef.map(item => {
                 return (
                   <>
-                  <div key={`item-${item.title}`} class="footers">
+                  <div key={`item-${item.title}`} className="footers">
                   <h5>
                   {item.title_Philippine_eagle}
                   </h5>
@@ -111,23 +111,15 @@ state={
                   <div key={`item-${item.title}`} className="footers">
                         <h5>{item.title_site}</h5>
                         <ul className="footer-sites footer-link">
-                          <li><a href="/covid/" target="_blank">{item.covid}</a></li>
-
+                          <li><a>{item.covid}</a></li>
                           <div className="seperator" />
-
-                          <li><a href="/about/" target="_blank">{item.about}</a></li>
-
+                          <li><a>{item.about}</a></li>
                           <div className="seperator" />
-
                           <li><a>{item.faq}</a></li>
-
                           <div className="seperator" />
-
                           <li><a>{item.insurance}</a></li>
-
                           <div className="seperator" />
-
-                          <li><a href="/apply/" target="_blank">{item.apply}</a></li>
+                          <li><a>{item.accommodation}</a></li>
                         </ul>
                   </div>
                   </>
