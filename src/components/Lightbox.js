@@ -2,7 +2,6 @@
 // import {PropertyContext} from '../context';
 // import SingleProperty from '../pages/SingleProperty';
 
-
 // export default function Lightbox() {
 
 //     const {column,
@@ -10,22 +9,20 @@
 //         images,
 //         alt
 //     } = SingleProperty;
-    
+
 //     return (
 //         <>
 //         <section>
 
-    
 //     <div className="row">
 //      {column.map((item,index)=>{
- 
+
 //          <div className="column">
 //          <img key={index} src={item} style="width:100%" onClick= {currentSlide({index})} />;
-//     </div> 
+//     </div>
 //     console.log(column);
-//     })}       
+//     })}
 
-  
 // </div>
 
 // <div id="myModal" className="modal">
@@ -46,12 +43,12 @@
 //       <div className="numbertext">3 / 4</div>
 //       <img src="" style="width:100%">
 //     </div>
-    
+
 //     <div className="mySlides">
 //       <div className="numbertext">4 / 4</div>
 //       <img src="" style="width:100%">
 //     </div>
-    
+
 //     <a className="prev" onClick="plusSlides(-1)">&#10094;</a>
 //     <a className="next" onClick="plusSlides(1)">&#10095;</a>
 
@@ -62,28 +59,28 @@
 //         </section>
 //         </>
 //     )
-    
+
 // }
 
 // function openModal() {
 //     document.getElementById("myModal").style.display = "block";
 //   }
-  
+
 //   function closeModal() {
 //     document.getElementById("myModal").style.display = "none";
 //   }
-  
+
 //   var slideIndex = 1;
 //   showSlides(slideIndex);
-  
+
 //   function plusSlides(n) {
 //     showSlides(slideIndex += n);
 //   }
-  
+
 //   function currentSlide(n) {
 //     showSlides(slideIndex = n);
 //   }
-  
+
 //   function showSlides(n) {
 //     var i;
 //     var slides = document.getElementsByClassName("mySlides");

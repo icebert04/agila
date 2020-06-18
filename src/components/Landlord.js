@@ -1,62 +1,80 @@
-import React, {Component} from 'react';
-import Title from './Title';
+import React, { Component } from "react";
+import Title from "./Title";
 
 //icons
-import { FaShieldAlt } from 'react-icons/fa';
-import { GiReceiveMoney} from 'react-icons/gi';
-import { BsChatFill, BsFillHouseFill } from 'react-icons/bs';
+import { FaShieldAlt } from "react-icons/fa";
+import { GiReceiveMoney } from "react-icons/gi";
+import { BsChatFill, BsFillHouseFill } from "react-icons/bs";
 // import {  } from 'react-icons/ai';
 
 export default class Landlord extends Component {
-state={
-    landlord:[
-        {
-            icon:<GiReceiveMoney/>,
-            title: "earnings",
-            info: "Attain higher occupancy rate through Mid-Term rentals",
-            subinfo : "Steady cash-flow guaranteed, maximizing the property's annual yield"
-        },
-        {
-            icon:<BsChatFill/>,
-            title: "communication",
-            info: "We handle 100% of tenant's communication",
-            subinfo: "Contactless Booking and Check-In... Easy online so you can review, offer the contract, check-in and collect payments digitally"
-        },
-        {
-            icon:<FaShieldAlt/>,
-            title: "security",
-            info: "Vetted tenants, typically business executives who stay for one month or longer",
-            subinfo : "Your property will always be in impeccable condition... Security Deposit Policy & Insurance a possibility"
-            
-        },
-        {
-            icon:<BsFillHouseFill/>,
-            title: "property management",
-            info: "Our customer support team will manage all the work on your behalf to enable a seamless guest experience",
-            subinfo: "We help landlords provide 5-star quality housekeeping & maintenance management, assist professional cleaning (COVID-Protect), & schedule regular check-ups to make sure it stays in top-notch condition"
-        }
-    ]
-};
+  render() {
+    return (
+      <div className="landlords">
+        <Title title="for landlords" />
+        <div className="landlords-center">
+          <article className="landlord">
+            <span>
+              <GiReceiveMoney />
+            </span>
+            <h6>earnings</h6>
+            <p> Attain higher occupancy rate through Mid-Term rentals</p>
+            <br />
+            <p>
+              Steady cash-flow guaranteed, maximizing the property's annual
+              yield
+            </p>
+          </article>
 
-    render() {
-     return (
+          <article className="landlord">
+            <span>
+              <BsChatFill />
+            </span>
+            <h6>communication</h6>
+            <p>We handle 100% of tenant's communication</p>
+            <br />
+            <p>
+              Contactless Booking and <br /> Check-In Easy online so you can
+              review, offer the contract, check-in and collect payments
+              digitally
+            </p>
+          </article>
 
-        <div className="landlords">
-            <Title title='for landlords' />
-            <div className="landlords-center">
-                {this.state.landlord.map((item, index) => {
-              return (
-              <article key={index} className="landlord">
-              <span>{item.icon}</span>
-              <h6>{item.title}</h6>
-              <p>{item.info}</p>
-              <br/>
-              <p>{item.subinfo}</p>
-              </article > 
-              );         
-          })}
-            </div>
+          <article className="landlord">
+            <span>
+              <FaShieldAlt />
+            </span>
+            <h6>security</h6>
+            <p>
+              Vetted tenants, typically business executives who stay for one
+              month or longer
+            </p>
+            <br />
+            <p>
+              Your property will always be in impeccable condition <br />
+              Security Deposit Policy & Insurance a possibility
+            </p>
+          </article>
+
+          <article className="landlord">
+            <span>
+              <BsFillHouseFill />
+            </span>
+            <h6>property management</h6>
+            <p>
+              Our customer support team will manage all the work on your behalf
+              to enable a seamless guest experience
+            </p>
+            <br />
+            <p>
+              We help landlords provide <br /> 5-star quality housekeeping &
+              maintenance management, assist professional cleaning
+              (COVID-Protect), & scheduled regular check-ups to make sure it
+              stays in top-notch condition
+            </p>
+          </article>
         </div>
-      );
-    }
+      </div>
+    );
+  }
 }
