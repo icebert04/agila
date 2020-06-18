@@ -43,7 +43,7 @@ import Futer from '../components/Futer'
                     <b>Connected For Productivity</b> 
                      <p>Set up to WFH, with high-speed WiFi, fully-equipped kitchen, a coffee machine, on-site laundry, gym, working desks/office space & more*</p>
                      </div>
-                 <a className="copyright">May vary based on unit and building</a>
+                 <span className="copyright">May vary based on unit and building</span>
                  </li>
              </ul>
             

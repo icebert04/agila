@@ -32,7 +32,7 @@ export default class Futer extends Component {
                   <p><b><GrMail/></b> admin@balayagila.com</p>
                 <br/>
               <h5>Visit our FB Page</h5>
-             <a className="btn-primary btn" href="https://www.facebook.com/balayagila/" target="_blank">Balay Agila</a>
+             <a className="btn-primary btn" href="https://www.facebook.com/balayagila/" target="_new">Balay Agila</a>
                 </article >
               
              <article  className="footers">
@@ -41,11 +41,11 @@ export default class Futer extends Component {
                  Our Philippine Eagle is diminishing
                   </h5>
                   <p>Help The Philippine Eagle Foundation in your own way</p>
-                  <a className="btn-secondary btn" href="https://www.philippineeaglefoundation.org/" target="_blank">Donate</a>   
+                  <a className="btn-secondary btn" href="https://www.philippineeaglefoundation.org/" target="_new">Donate</a>   
          
                   </div>
                   <div>
-                  <img src={agila} className="img" />
+                  <img src={agila} className="img" alt="phillipine eagle" />
                     </div>
                   </article>
                 
@@ -53,15 +53,15 @@ export default class Futer extends Component {
                   <div className="footers">
                         <h5>Site Links</h5>
                         <ul className="footer-sites footer-link">
-                          <li><a href="/covid/" target="_blank">COVID-19 protect</a></li>
+                          <li><a href="/covid/" rel="noopener noreferrer" target="_new">COVID-19 protect</a></li>
                           <div className="seperator" />
-                          <li><a href="/about/" target="_blank">About us</a></li>
+                          <li><a href="/about/" rel="noopener noreferrer" target="_new">About us</a></li>
                           <div className="seperator" />
-                          <li><a>FAQ</a></li>
+                          <li>FAQ</li>
                           <div className="seperator" />
-                          <li><a>insurance</a></li>
+                          <li>insurance</li>
                           <div className="seperator" />
-                          <li><a href="/apply/" target="_blank">Apply As Landlord</a></li>
+                          <li><a href="/apply/" rel="noopener noreferrer" target="_new">Apply As Landlord</a></li>
                         </ul>
                       </div>
 
@@ -69,7 +69,7 @@ export default class Futer extends Component {
                         <span><GrFacebook/></span><h5>Join our exclusive facebook group</h5>
                         
                         <p>Become part of our substantial & vibrant 'Hosting Community', Get inside access</p>
-                        <a href="https://www.facebook.com/groups/203282164142189/" target="_blank" className="btn btn-primary">Join Now</a>
+                        <a href="https://www.facebook.com/groups/203282164142189/" target="_new" className="btn btn-primary">Join Now</a>
                     </div> 
 
                    </div> 

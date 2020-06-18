@@ -15,7 +15,7 @@ export default function About() {
         </div>
        
 
-        <p>Renting a home should be as easy as buying your shopping online.<br /> And so, <a className="gold-text">Balay Agila</a> was born.</p>
+        <p>Renting a home should be as easy as buying your shopping online.<br /> And so, <span className="gold-text">Balay Agila</span> was born.</p>
 
        
 

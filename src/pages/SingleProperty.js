@@ -113,7 +113,7 @@ export default class SingleProperty extends Component {
        <section>
         <div className="fbLink btn">     
                 <p> Contact us or 
-                <a className="btn-small btn" href={fbLink} target="_blank"> Book now</a>
+                <a className="btn-small btn" href={fbLink} target="_new"> Book now</a>
               </p>
           </div>
           </section>
