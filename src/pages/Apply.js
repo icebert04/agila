@@ -16,11 +16,12 @@ export default function Apply() {
             <li>
               <h3>Step 1</h3>
               <div>
-                <h4> Contact us and get an offer within hours</h4>
+                <h4> Contact us & get an offer within hours</h4>
                 <p>
-                  Fill out our interest form to let us know about your property
-                  and your expected rate. We will do our homework and get back
-                  to you with an offer.
+                  Fill out our application form to let us know about your
+                  property and your expected rate.
+                  <br /> We will do our homework and get back to you with an
+                  offer.
                 </p>
               </div>
             </li>
@@ -28,11 +29,11 @@ export default function Apply() {
             <li>
               <h3>Step 2</h3>
               <div>
-                <h4>Arrange an on-site visit</h4>
+                <h4>Arrange an On-Site visit</h4>
                 <p>
-                  Our professional architect and design team will visit your
-                  property to perform measurements, and answer any questions you
-                  may have.
+                  Our <b className="gold-text">Balay Agila</b> team will visit
+                  your property to perform measurements, and answer any
+                  questions you may have.
                 </p>
               </div>
             </li>
@@ -52,7 +53,7 @@ export default function Apply() {
       </section>
       <section className="second">
         <div className="apply">
-          <h2> What we do for you </h2>
+          <h2> What We Do For You </h2>
 
           <section className="box-container">
             <div className="box-center">
@@ -87,7 +88,7 @@ export default function Apply() {
                   <BsBucketFill />
                 </span>
                 <p>
-                  Provide professional cleaning and check-ups of your propert
+                  Provide professional cleaning and check-ups of your property
                 </p>
               </div>
             </div>
