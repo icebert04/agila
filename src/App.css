@@ -381,11 +381,10 @@ h6 {
   text-align: center;
 }
 
-.covid ul {
+.covid-center {
   list-style: none;
   width: 90vw;
-  margin: 3rem auto;
-  margin-bottom: 5rem;
+  margin: 3rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
   grid-row-gap: 2rem;

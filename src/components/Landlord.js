@@ -18,11 +18,11 @@ export default class Landlord extends Component {
               <GiReceiveMoney />
             </span>
             <h6>earnings</h6>
-            <p> Attain higher occupancy rate through Mid-Term rentals</p>
+            <p> Attain higher occupancy rate through "Mid-Term" rentals</p>
             <br />
             <p>
-              Steady cash-flow guaranteed, maximizing the property's annual
-              yield
+              Steady cash-flow guaranteed,
+              <br /> maximizing the property's annual yield
             </p>
           </article>
 
@@ -34,9 +34,9 @@ export default class Landlord extends Component {
             <p>We handle 100% of tenant's communication</p>
             <br />
             <p>
-              Contactless Booking and <br /> Check-In Easy online so you can
-              review, offer the contract, check-in and collect payments
-              digitally
+              Contactless Booking and Check-In
+              <br /> Easy online so you can review,
+              <br /> offer the contract, check-in and collect payments digitally
             </p>
           </article>
 
@@ -51,7 +51,8 @@ export default class Landlord extends Component {
             </p>
             <br />
             <p>
-              Your property will always be in impeccable condition <br />
+              Your property will always be in impeccable condition,
+              <br />
               Security Deposit Policy & Insurance a possibility
             </p>
           </article>

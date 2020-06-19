@@ -21,8 +21,8 @@ export default class Tenants extends Component {
             </span>
             <h6>view online</h6>
             <p>
-              Our team will visit properties, take photos, floor plans and video
-              tours for you, at no cost
+              Our team will visit properties, take Photos, Floor Plans and
+              "Video Tours" for you, at no cost
             </p>
             <br />
             <p>
@@ -37,8 +37,10 @@ export default class Tenants extends Component {
             </span>
             <h6>complete amenities</h6>
             <p>
-              High-speed WiFi, fully-equipped kitchen, a coffee machine, on-site
-              laundry, gym, working desks/office space & more
+              High-speed WiFi,
+              <br /> Fully-equipped kitchen & coffee machine,
+              <br /> On-site laundry & gym,
+              <br /> Working desks/Office space & more
             </p>
             <br />
             <p>Tell us what else do you need... We'll add that too</p>
