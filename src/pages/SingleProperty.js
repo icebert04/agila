@@ -51,7 +51,7 @@ export default class SingleProperty extends Component {
       Wifi,
       pets,
       parking,
-      fbLink,
+      // fbLink,
       images,
     } = property;
     const [...defaultImg] = images;
@@ -111,7 +111,6 @@ export default class SingleProperty extends Component {
         <section>
           <div className="fbLink btn">
             <p>
-              {" "}
               Contact us
               <br />
               <MdPhoneIphone />
