@@ -58,7 +58,7 @@ export default class SingleProperty extends Component {
     return (
       <>
         <StyledHero img={images[0] || this.state.defaultBcg}>
-          <Banner title={`${name} property`}>
+          <Banner title={`${name}`}>
             <Link to="/properties" className="btn-primary">
               back to properties
             </Link>
@@ -92,7 +92,7 @@ export default class SingleProperty extends Component {
                 {capacity > 1 ? `${capacity} people` : `${capacity} person`}
               </h6>
 
-              <h6>{pets ? "pets allowed" : "no pets allowed"}</h6>
+              <h6>{pets ? "pets allowed" : ""}</h6>
 
               <h6>{Wifi ? "Wifi included" : "no Wifi included"}</h6>
 
