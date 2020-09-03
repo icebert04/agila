@@ -5,7 +5,7 @@ export default function Verified() {
   return (
     <div className="verified-top">
       <h6>
-        <FaCheckCircle /> verified
+        <FaCheckCircle /> occupied
       </h6>
     </div>
   );
