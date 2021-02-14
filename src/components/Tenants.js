@@ -57,7 +57,7 @@ export default class Tenants extends Component {
             </p>
             <br />
             <p>
-              Provide more spacious, <br /> lower-cost alternative to a hotel
+              Provide more spacious and <br /> lower-cost alternative 
             </p>
           </article>
 

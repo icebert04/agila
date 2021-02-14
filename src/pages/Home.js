@@ -14,7 +14,7 @@ export default function Home() {
       <Hero>
         <Banner
           title="Balay Agila"
-          subtitle="We visit the Properties, so you can book from wherever you are"
+          subtitle="Guaranteed rental income in good times and bad"
         >
           <Link to="/properties" className="btn-primary">
             search rentals

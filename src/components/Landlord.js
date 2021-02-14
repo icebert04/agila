@@ -18,7 +18,7 @@ export default class Landlord extends Component {
               <GiReceiveMoney />
             </span>
             <h6>earnings</h6>
-            <p> Attain higher occupancy rate through "Mid-Term" rentals</p>
+            <p> Attain higher occupancy rate through "Screened" rentals</p>
             <br />
             <p>
               Steady cash-flow guaranteed,

@@ -47,7 +47,7 @@ export default function About() {
         <p>
           Our dream is to make Renting as simple and fast as ordering a coffee.
           <br />
-          We work to Teleport people into homes anywhere in Metro Manila, so
+          We work to Teleport people into homes anywhere in The Philippines, so
           they can live the experience even without being physically there.
           <br /> We connect with them. We bring reality to them.
         </p>
