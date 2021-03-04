@@ -17,8 +17,6 @@ export default function PropertyFilter({ propertys }) {
     price,
     minPrice,
     maxPrice,
-    minSize,
-    maxSize,
     Wifi,
     pets,
     parking,
@@ -28,16 +26,7 @@ export default function PropertyFilter({ propertys }) {
   //add all
   locations = ["any", ...locations];
 
-  //terms
-  let term = getUnique(propertys, "terms");
-  term = term.map((item, index) => {
-    return (
-      <option key={index} value={item}>
-        {item}
-      </option>
-    );
-  });
-
+  
   //map to jsx
   locations = locations.map((item, index) => {
     return (
@@ -46,9 +35,38 @@ export default function PropertyFilter({ propertys }) {
       </option>
     );
   });
+  
+  //terms
+  
+  // const termSort = [].concat(this.state.data)
+  //   .sort((a, b) => a.term > b.term ? 1 : -1);
+  let term = getUnique(propertys, "terms");
+
+  term = ["any", ...term];
+  
+  term = term.map((item, index) => { 
+  
+    return (
+      <option key={index} value={item}>
+        {item}
+      </option>
+    );
+    
+  });
+  
+
+
   //capacity
   let people = getUnique(propertys, "capacity");
+
   people = people.map((item, index) => {
+
+  // const array = [{people}]
+
+  // array.sort(function(a, b) {
+  //   return a.value - b.value;
+  // });
+  // console.log(array);
     return (
       <option key={index} value={item}>
         {item}
@@ -121,31 +139,6 @@ export default function PropertyFilter({ propertys }) {
           />
         </div>
         {/* end of property price */}
-        {/* size */}
-        <div className="form-group">
-          <label htmlFor="size"> size</label>
-          <div className="size-inputs">
-            {/*min size*/}
-            <input
-              type="number"
-              name="minSize"
-              id="size"
-              value={minSize}
-              onChange={handleChange}
-              className="size-input"
-            />
-            {/*max size */}
-            <input
-              type="number"
-              name="maxSize"
-              id="size"
-              value={maxSize}
-              onChange={handleChange}
-              className="size-input"
-            />
-          </div>
-        </div>
-        {/* end of size */}
         {/* extras */}
         <div className="form-group">
           {/* Wifi */}

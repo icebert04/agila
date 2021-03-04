@@ -10,11 +10,11 @@ function PropertysContainer({context}){
    }
    
    return (
-       <div>
+        <div>
 
-               <PropertyFilter propertys={propertys}/>
-               <PropertyList propertys={sortedPropertys}/>
-       </div>
+            <PropertyFilter propertys={propertys}/>
+            <PropertyList propertys={sortedPropertys}/>
+        </div>
    )
 }
 

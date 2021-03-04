@@ -12,13 +12,11 @@ export default class PropertyProvider extends Component {
     featuredPropertys: [],
     loading: true,
     location: "any",
-    terms: "weekly",
+    terms: "any",
     capacity: 1,
     price: 0,
     minPrice: 0,
-    maxPrice: 0,
-    minSize: 0,
-    maxSize: 0,
+    maxPrice: 0,  
     Wifi: false,
     pets: false,
     parking: false,
@@ -37,7 +35,6 @@ export default class PropertyProvider extends Component {
         (property) => property.featured === true
       );
       let maxPrice = Math.max(...propertys.map((item) => item.price));
-      let maxSize = Math.max(...propertys.map((item) => item.size));
 
       this.setState({
         propertys,
@@ -46,7 +43,6 @@ export default class PropertyProvider extends Component {
         loading: false,
         price: maxPrice,
         maxPrice,
-        maxSize,
       });
     } catch (error) {
       console.log(error);
@@ -94,8 +90,6 @@ export default class PropertyProvider extends Component {
       terms,
       capacity,
       price,
-      minSize,
-      maxSize,
       Wifi,
       pets,
       parking,
@@ -115,7 +109,7 @@ export default class PropertyProvider extends Component {
     }
 
     //filters by terms
-    if (terms !== "weekly") {
+    if (terms !== "any") {
       tempPropertys = tempPropertys.filter(
         (property) => property.terms === terms
       );
@@ -131,10 +125,6 @@ export default class PropertyProvider extends Component {
     //filters by price
     tempPropertys = tempPropertys.filter((property) => property.price <= price);
 
-    //filter by size
-    tempPropertys = tempPropertys.filter(
-      (property) => property.size >= minSize && property.size <= maxSize
-    );
 
     //filter by Wifi
     if (Wifi) {

@@ -11,6 +11,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
 
 export default class SingleProperty extends Component {
+/** @param {Record<string, any>} props */
   constructor(props) {
     super(props);
 
@@ -45,7 +46,6 @@ export default class SingleProperty extends Component {
       location,
       terms,
       capacity,
-      size,
       price,
       extras,
       Wifi,
@@ -84,8 +84,6 @@ export default class SingleProperty extends Component {
               <h6>term : {terms}</h6>
 
               <h6>price : ₱{price}</h6>
-
-              <h6>size : {size}SQM</h6>
 
               <h6>
                 max capacity :{" "}
