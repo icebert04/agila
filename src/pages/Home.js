@@ -16,7 +16,7 @@ export default function Home() {
           title="Balay Agila"
           subtitle="Guaranteed rental income in good times and bad"
         >
-          <Link to="/properties" className="btn-primary">
+          <Link to="/rentals" className="btn-primary">
             search rentals
           </Link>
         </Banner>

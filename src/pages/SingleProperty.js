@@ -33,8 +33,8 @@ export default class SingleProperty extends Component {
       return (
         <div className="error">
           <h3>no such property could be found...</h3>
-          <Link to="/properties" className="btn-primary">
-            back to properties
+          <Link to="/rentals" className="btn-primary">
+            back to rentals
           </Link>
         </div>
       );
@@ -59,7 +59,7 @@ export default class SingleProperty extends Component {
       <>
         <StyledHero img={images[0] || this.state.defaultBcg}>
           <Banner title={`${name}`}>
-            <Link to="/properties" className="btn-primary">
+            <Link to="/rentals" className="btn-primary">
               back to properties
             </Link>
           </Banner>

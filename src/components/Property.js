@@ -13,10 +13,9 @@ export default function Property({ property }) {
         <img src={images[0] || defaultImg} alt="single" />
         <div className="price-top">
           <h6>₱{price}</h6>
-          <p>per month</p>
         </div>
         {verified && <Verified />}
-        <Link to={`/properties/${slug}`} className="btn-primary property-link">
+        <Link to={`/rentals/${slug}`} className="btn-primary property-link">
           Features
         </Link>
       </div>
